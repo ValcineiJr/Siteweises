@@ -139,7 +139,6 @@ export const Box1Image = styled.img`
   width: 350px;
 `;
 export const Box2 = styled.div`
-  height: 200px;
   background: ${props => props.bgColor};
 `;
 export const Box2Container = styled.div`
@@ -153,7 +152,41 @@ export const Box2Title = styled.h2`
 `;
 export const Services = styled.div`
   display: flex;
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+  }
 `;
 export const Box2Description = styled.p`
   color: #eee;
+  width: 200px;
+  margin: 10px 0;
+  text-align: center;
+`;
+export const Service = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin: 20px;
+  background: #171941;
+
+  i {
+    font-size: 30px;
+    color: #fff;
+  }
+`;
+export const ServiceName = styled.span`
+  color: #fff;
+  font-size: 20px;
+  margin: 8px 0;
+  font-weight: bold;
+`;
+export const ServiceDescription = styled.p`
+  color: #fff;
+  width: 150px;
+  padding-bottom: 8px;
+  text-align: center;
 `;

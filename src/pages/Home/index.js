@@ -23,9 +23,29 @@ import {
   MenuList,
   MenuText,
   MoreInfoBtn,
+  Service,
+  ServiceDescription,
+  ServiceName,
   Services
 } from "./styles";
 export default function Home() {
+  const services = [
+    {
+      icon: "fas fa-globe-europe",
+      name: "Dev. Web",
+      description: "Lorem ipsum dolor sit amet consectetur."
+    },
+    {
+      icon: "fas fa-mobile-alt",
+      name: "Dev. Mobile",
+      description: "Lorem ipsum dolor sit amet consectetur."
+    },
+    {
+      icon: "fas fa-desktop",
+      name: "Softwares",
+      description: "Lorem ipsum dolor sit amet consectetur."
+    }
+  ];
   const menuItens = [
     { id: 0, active: "active", name: "início" },
     { id: 1, active: "disable", name: "sobre" },
@@ -140,7 +160,17 @@ export default function Home() {
             <Box2Description>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Box2Description>
-            <Services></Services>
+            <Services>
+              {services.map(service => (
+                <Service>
+                  <i class={service.icon}></i>
+                  <ServiceName>{service.name}</ServiceName>
+                  <ServiceDescription>
+                    Lorem ipsum dolor sit amet consectetur.
+                  </ServiceDescription>
+                </Service>
+              ))}
+            </Services>
           </Box2Container>
         </Container>
       </Box2>
