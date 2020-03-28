@@ -36,6 +36,8 @@ export const MenuLink = styled.a`
   text-decoration: none;
   &:hover {
     color: #fff;
+    
+
   }
 
   .active {
@@ -47,6 +49,10 @@ export const MenuText = styled.span`
   font-weight: bold;
   padding-bottom: 5px;
   font-size: 14px;
+  &:hover{
+    color: #fff;
+    border-bottom: 3px solid #fff;
+  }
 `;
 export const Icons = styled.div``;
 export const IconsList = styled.ul`
@@ -72,7 +78,14 @@ export const Box1 = styled.div`
   padding: 50px 0;
 `;
 export const ImageLateral = styled.div`
-  width: 300px;
+  width: 500px;
   height: 300px;
   background: red;
+`;
+export const ImageLateral2 = styled.div`
+  font-family: "Open Sans", sans-serif;
+  width: 500px;
+  text-align:center;
+  height: 300px;
+  background: green;
 `;
