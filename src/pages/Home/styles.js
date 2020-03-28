@@ -77,8 +77,11 @@ export const MenuFather = styled.div`
   align-items: center;
 `;
 export const Box1 = styled.div`
-  background: ${props => props.color};
+  background: ${props => props.bgColor};
   padding: 50px 0;
+`;
+export const Box1Container = styled.div`
+  display: flex;
 `;
 export const Box1Left = styled.div`
   flex: 1;
@@ -134,4 +137,23 @@ export const MoreInfoBtn = styled.a`
 export const Box1Image = styled.img`
   height: 300px;
   width: 350px;
+`;
+export const Box2 = styled.div`
+  height: 200px;
+  background: ${props => props.bgColor};
+`;
+export const Box2Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  align-items: center;
+`;
+export const Box2Title = styled.h2`
+  color: #fff;
+`;
+export const Services = styled.div`
+  display: flex;
+`;
+export const Box2Description = styled.p`
+  color: #eee;
 `;

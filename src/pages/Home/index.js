@@ -1,13 +1,17 @@
 import React from "react";
-import Lottie from "react-lottie";
 import * as animationData from "../../Animation/17899-hand-sanitizer.json";
 import {
   ApresentationDescription,
   ApresentationTitle,
   Body,
   Box1,
+  Box1Container,
   Box1Left,
   Box1Right,
+  Box2,
+  Box2Container,
+  Box2Description,
+  Box2Title,
   Container,
   Header,
   IconLink,
@@ -18,9 +22,9 @@ import {
   MenuLink,
   MenuList,
   MenuText,
-  MoreInfoBtn
+  MoreInfoBtn,
+  Services
 } from "./styles";
-import "./styles.css";
 export default function Home() {
   const menuItens = [
     { id: 0, active: "active", name: "início" },
@@ -98,42 +102,48 @@ export default function Home() {
           </MenuFather>
         </Container>
       </Header>
-      <Box1 color={colors["purple-dark"]}>
-        <Container className="containerMain">
-          <Box1Left className="conteudoMain">
-            <ApresentationTitle>as melhores soluções</ApresentationTitle>
-            <ApresentationDescription>
-              No meio de tanta informação e da quantidade de ferramentas que
-              surgem todos os dias, você precisa de alguém que te leve na
-              direção certa.
-            </ApresentationDescription>
-            <MoreInfoBtn
-              href="#"
-              hoverColor={colors["light-pink"]}
-              bgColor={colors["dark-pink"]}
-            >
-              Saiba Mais
-            </MoreInfoBtn>
-          </Box1Left>
-          <Box1Right>
-            <lottie-player
-              src="https://assets3.lottiefiles.com/packages/lf20_xRmNN8.json"
-              background="#171941"
-              speed="1"
-              style={{ width: 350, height: 300 }}
-              loop
-              autoplay
-            ></lottie-player>
-          </Box1Right>
+      <Box1 bgColor={colors["purple-dark"]}>
+        <Container>
+          <Box1Container>
+            <Box1Left>
+              <ApresentationTitle>as melhores soluções</ApresentationTitle>
+              <ApresentationDescription>
+                No meio de tanta informação e da quantidade de ferramentas que
+                surgem todos os dias, você precisa de alguém que te leve na
+                direção certa.
+              </ApresentationDescription>
+              <MoreInfoBtn
+                href="#"
+                hoverColor={colors["light-pink"]}
+                bgColor={colors["dark-pink"]}
+              >
+                Saiba Mais
+              </MoreInfoBtn>
+            </Box1Left>
+            <Box1Right>
+              <lottie-player
+                src="https://assets3.lottiefiles.com/packages/lf20_xRmNN8.json"
+                background="#171941"
+                speed="1"
+                style={{ width: 350, height: 300 }}
+                loop
+                autoplay
+              ></lottie-player>
+            </Box1Right>
+          </Box1Container>
         </Container>
       </Box1>
-      <Lottie
-        options={defaultOptions}
-        height={300}
-        width={400}
-        isStopped={false}
-        isPaused={false}
-      />
+      <Box2 bgColor={colors["dark-pink"]}>
+        <Container>
+          <Box2Container>
+            <Box2Title>Nossos Serviços</Box2Title>
+            <Box2Description>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </Box2Description>
+            <Services></Services>
+          </Box2Container>
+        </Container>
+      </Box2>
     </Body>
   );
 }
