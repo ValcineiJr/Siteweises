@@ -26,9 +26,23 @@ import {
   Service,
   ServiceDescription,
   ServiceName,
-  Services
+  Services,
+  Box3,
+  Box3Container,
+  Box3Title,
+  Box3Description,
+  Services2,
+  Service2,
+  ServiceName2,
+  ServiceDescription2,
+  Box4,
+  Box4Title,
+  Box4Container,
+  Box4Description,
+  MoreInfoBtn2
 } from "./styles";
 export default function Home() {
+
   const services = [
     {
       icon: "fas fa-globe-europe",
@@ -46,6 +60,27 @@ export default function Home() {
       description: "Lorem ipsum dolor sit amet consectetur."
     }
   ];
+
+  const services2 = [
+    {
+      icon:"fab fa-react",
+      name:"React",
+      description:"Lorem ipsum dolor sit amet consectetur."
+    },
+    {
+    
+      icon:"fas fa-mobile-alt",
+      name:"React Native",
+      description:"Lorem ipsum dolor sit amet consectetur."
+    },
+    {
+    
+      icon:"fas fa-network-wired",
+      name:"React",
+      description:"Lorem ipsum dolor sit amet consectetur."
+    }
+
+  ]
   const menuItens = [
     { id: 0, active: "active", name: "início" },
     { id: 1, active: "disable", name: "sobre" },
@@ -174,6 +209,38 @@ export default function Home() {
           </Box2Container>
         </Container>
       </Box2>
+      <Box3 bgColor={colors["purple-dark"]} >
+        <Container>
+          <Box3Container>
+            <Box3Title> Software </Box3Title>
+            <Box3Description>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </Box3Description>
+                <Services2>
+                  {services2.map(service2 =>(
+                    <Service2>
+                      <i class={service2.icon}></i>
+                      <ServiceName2>{service2.name}</ServiceName2>
+                      <ServiceDescription2>
+                      Lorem ipsum dolor sit amet consectetur.
+                      </ServiceDescription2>
+                    </Service2>
+                  ))}
+                </Services2>
+          </Box3Container>
+        </Container>
+      </Box3>
+      <Box4 bgColor={colors["dark-pink"]} >
+        <Box4Container>
+          <Box4Title> Contato </Box4Title>
+          <Box4Description>
+            Lorem ipsum dolor sit amet consectetur.
+          </Box4Description>
+          <MoreInfoBtn2 bgColor={colors["purple-dark"]}>
+            CONTATO
+          </MoreInfoBtn2>
+        </Box4Container>
+      </Box4>
     </Body>
   );
 }

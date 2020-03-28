@@ -118,8 +118,8 @@ export const ApresentationDescription = styled.p`
 export const MoreInfoBtn = styled.a`
   cursor: pointer;
   background: ${props => props.bgColor};
-  border-radius: 15px;
-  width: 100px;
+  border-radius: 5px;
+  width: 200px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -189,4 +189,90 @@ export const ServiceDescription = styled.p`
   width: 150px;
   padding-bottom: 8px;
   text-align: center;
+`;
+export const Box3 = styled.div`
+  background: ${props => props.bgColor};
+`;
+export const Box3Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  align-items: center;
+`;
+export const Box3Title = styled.h2`
+  color: #fff;
+`;
+export const Box3Description = styled.p`
+  color: #eee;
+  width: 200px;
+  margin: 10px 0;
+  text-align: center;
+`;
+export const Services2 = styled.div`
+  display: flex;
+`;
+export const Service2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin: 20px;
+  background: #171941;
+
+  i {
+    font-size: 30px;
+    color: #fff;
+  }
+`;
+export const ServiceName2 = styled.span`
+  color: #fff;
+  font-size: 20px;
+  margin: 8px 0;
+  font-weight: bold;
+`;
+export const ServiceDescription2 = styled.p`
+  color: #fff;
+  width: 150px;
+  padding-bottom: 8px;
+  text-align: center;
+`;
+export const Box4 = styled.div`
+  background: ${props => props.bgColor};
+`;
+
+export const Box4Title = styled.h2`
+  color: #fff;
+`;
+export const Box4Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  align-items: center;
+`;
+export const Box4Description = styled.p`
+  color: #eee;
+  width: 200px;
+  margin: 10px 0;
+  text-align: center;
+`;
+export const MoreInfoBtn2 = styled.a`
+  cursor: pointer;
+  background: ${props => props.bgColor};
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 50px;
+  transition: all 0.6s;
+  text-decoration: none;
+
+  &:hover {
+    color: #eee;
+    background: ${props => props.hoverColor};
+  }
 `;
