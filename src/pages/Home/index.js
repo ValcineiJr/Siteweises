@@ -1,23 +1,26 @@
 import React from "react";
-import './styles.css'
-import Lottie from 'react-lottie';
-import * as animation from '../../Animation/animation.json'
+import Lottie from "react-lottie";
+import * as animationData from "../../Animation/17899-hand-sanitizer.json";
 import {
+  ApresentationDescription,
+  ApresentationTitle,
   Body,
   Box1,
+  Box1Left,
+  Box1Right,
   Container,
   Header,
   IconLink,
   Icons,
   IconsList,
-  ImageLateral,
   Menu,
   MenuFather,
   MenuLink,
   MenuList,
   MenuText,
-  ImageLateral2,
+  MoreInfoBtn
 } from "./styles";
+import "./styles.css";
 export default function Home() {
   const menuItens = [
     { id: 0, active: "active", name: "início" },
@@ -44,22 +47,20 @@ export default function Home() {
   };
 
   function activeItem(id) {
-
     menuItens.map(item => {
       document.getElementById(item.name).classList.remove("active");
       document.getElementById(id).classList.add("active");
     });
   }
-  
+
   const defaultOptions = {
     loop: true,
-    autoplay: true, 
-    animationData: animation,
+    autoplay: true,
+    animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
+      preserveAspectRatio: "xMidYMid slice"
     }
   };
-  
 
   return (
     <Body>
@@ -98,23 +99,41 @@ export default function Home() {
         </Container>
       </Header>
       <Box1 color={colors["purple-dark"]}>
-        <Container className="containerMain" >
-          <ImageLateral className="conteudoMain" >
-         
-          </ImageLateral>
-          <ImageLateral2>
-                <div className="apresentacao" >
-                  <h1>Welcome</h1>
-                  <p>No meio de tanta informação e da quantidade de</p>
-                  <p>ferramentas que surgem todos os dias, você precisa de</p>
-                  <p>alguém que te leve na direção certa.</p>
-                  <div className="containerButton" >
-                    <button type="submit">EMBARCAR NESSE FOGUETE</button>
-                  </div>
-                </div>
-          </ImageLateral2>
+        <Container className="containerMain">
+          <Box1Left className="conteudoMain">
+            <ApresentationTitle>as melhores soluções</ApresentationTitle>
+            <ApresentationDescription>
+              No meio de tanta informação e da quantidade de ferramentas que
+              surgem todos os dias, você precisa de alguém que te leve na
+              direção certa.
+            </ApresentationDescription>
+            <MoreInfoBtn
+              href="#"
+              hoverColor={colors["light-pink"]}
+              bgColor={colors["dark-pink"]}
+            >
+              Saiba Mais
+            </MoreInfoBtn>
+          </Box1Left>
+          <Box1Right>
+            <lottie-player
+              src="https://assets3.lottiefiles.com/packages/lf20_xRmNN8.json"
+              background="#171941"
+              speed="1"
+              style={{ width: 350, height: 300 }}
+              loop
+              autoplay
+            ></lottie-player>
+          </Box1Right>
         </Container>
       </Box1>
+      <Lottie
+        options={defaultOptions}
+        height={300}
+        width={400}
+        isStopped={false}
+        isPaused={false}
+      />
     </Body>
   );
 }

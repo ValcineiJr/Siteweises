@@ -36,8 +36,6 @@ export const MenuLink = styled.a`
   text-decoration: none;
   &:hover {
     color: #fff;
-    
-
   }
 
   .active {
@@ -49,7 +47,7 @@ export const MenuText = styled.span`
   font-weight: bold;
   padding-bottom: 5px;
   font-size: 14px;
-  &:hover{
+  &:hover {
     color: #fff;
     border-bottom: 3px solid #fff;
   }
@@ -77,15 +75,58 @@ export const Box1 = styled.div`
   background: ${props => props.color};
   padding: 50px 0;
 `;
-export const ImageLateral = styled.div`
-  width: 500px;
+export const Box1Left = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
   height: 300px;
-  background: red;
+
+  @media (max-width: 700px) {
+    align-items: center;
+  }
 `;
-export const ImageLateral2 = styled.div`
-  font-family: "Open Sans", sans-serif;
-  width: 500px;
-  text-align:center;
+export const Box1Right = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
   height: 300px;
-  background: green;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+export const ApresentationTitle = styled.h1`
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #fff;
+`;
+export const ApresentationDescription = styled.p`
+  color: #eee;
+  width: 320px;
+  margin-top: 10px;
+  font-size: 16px;
+`;
+export const MoreInfoBtn = styled.a`
+  cursor: pointer;
+  background: ${props => props.bgColor};
+  border-radius: 15px;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 50px;
+  transition: all 0.6s;
+  text-decoration: none;
+
+  &:hover {
+    color: #eee;
+    background: ${props => props.hoverColor};
+  }
+`;
+export const Box1Image = styled.img`
+  height: 300px;
+  width: 350px;
 `;
