@@ -7,7 +7,7 @@ export const Body = styled.div`
   top: 0;
   left: 0;
   z-index: 11;
-  width: 100%;
+  min-width: 100%;
   height: 100%;
   font-family: "Open Sans", sans-serif;
 `;
@@ -19,6 +19,7 @@ export const Container = styled.div`
 `;
 export const Menu = styled.div``;
 export const Header = styled.div`
+  width: 100%;
   height: 80px;
   background: #e14eca;
   display: flex;
@@ -27,6 +28,10 @@ export const Header = styled.div`
 export const MenuList = styled.ul`
   list-style: none;
   display: flex;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 export const MenuLink = styled.a`
   padding: 10px;
