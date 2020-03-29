@@ -16,12 +16,14 @@ export const Container = styled.div`
   max-width: 1000px;
   background: ${props => props.color};
   margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  fo
 `;
 export const Menu = styled.div``;
 export const Header = styled.div`
   width: 100%;
-  height: 80px;
-  background: #e14eca;
+  min-height: 80px;
+  background: ${props => props.bgColor};
   display: flex;
   align-items: center;
 `;
@@ -78,7 +80,7 @@ export const MenuFather = styled.div`
 `;
 export const Box1 = styled.div`
   background: ${props => props.bgColor};
-  padding: 50px 0;
+  padding: 70px 0;
 `;
 export const Box1Container = styled.div`
   display: flex;
@@ -107,20 +109,28 @@ export const Box1Right = styled.div`
 export const ApresentationTitle = styled.h1`
   text-transform: uppercase;
   font-size: 30px;
-  color: #fff;
+  color: ${props => props.color};
+
+  @media (max-width: 700px) {
+    text-align: center;
+  }
 `;
 export const ApresentationDescription = styled.p`
-  color: #eee;
+  color: ${props => props.color};
   width: 320px;
   margin-top: 10px;
   font-size: 16px;
+
+  @media (max-width: 700px) {
+    text-align: center;
+  }
 `;
 export const MoreInfoBtn = styled.a`
   cursor: pointer;
   background: ${props => props.bgColor};
   border-radius: 5px;
-  width: 200px;
-  height: 40px;
+  width: 170px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,11 +154,12 @@ export const Box2 = styled.div`
 export const Box2Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px 0;
+  padding: 60px 0;
   align-items: center;
 `;
 export const Box2Title = styled.h2`
-  color: #fff;
+  color: #253138;
+  font-size: 34px;
 `;
 export const Services = styled.div`
   display: flex;
@@ -158,7 +169,8 @@ export const Services = styled.div`
   }
 `;
 export const Box2Description = styled.p`
-  color: #eee;
+  color: #222;
+  font-weight: bold;
   width: 200px;
   margin: 10px 0;
   text-align: center;
@@ -168,14 +180,14 @@ export const Service = styled.div`
   flex-direction: column;
   align-items: center;
   flex: 1;
-  padding: 20px 40px;
+  padding: 5px 40px;
   border-radius: 5px;
   margin: 20px;
-  background: #171941;
 
+  background: ${props => props.bgColor};
   i {
     font-size: 30px;
-    color: #fff;
+    color: #407aff;
   }
 `;
 export const ServiceName = styled.span`
@@ -185,7 +197,8 @@ export const ServiceName = styled.span`
   font-weight: bold;
 `;
 export const ServiceDescription = styled.p`
-  color: #fff;
+  color: #eee;
+  font-size: 14px;
   width: 150px;
   padding-bottom: 8px;
   text-align: center;
@@ -201,15 +214,18 @@ export const Box3Container = styled.div`
 `;
 export const Box3Title = styled.h2`
   color: #fff;
+  font-size: 34px;
 `;
 export const Box3Description = styled.p`
   color: #eee;
-  width: 200px;
   margin: 10px 0;
   text-align: center;
 `;
 export const Services2 = styled.div`
   display: flex;
+  @media (max-width: 840px) {
+    flex-direction: column;
+  }
 `;
 export const Service2 = styled.div`
   display: flex;
@@ -219,21 +235,22 @@ export const Service2 = styled.div`
   padding: 20px 40px;
   border-radius: 5px;
   margin: 20px;
-  background: #171941;
+  background: #fafafa;
 
   i {
     font-size: 30px;
-    color: #fff;
+    color: #407aff;
   }
 `;
 export const ServiceName2 = styled.span`
-  color: #fff;
+  color: #171941;
   font-size: 20px;
   margin: 8px 0;
   font-weight: bold;
 `;
 export const ServiceDescription2 = styled.p`
-  color: #fff;
+  color: #171941;
+  font-size: 14px;
   width: 150px;
   padding-bottom: 8px;
   text-align: center;
@@ -243,7 +260,8 @@ export const Box4 = styled.div`
 `;
 
 export const Box4Title = styled.h2`
-  color: #fff;
+  color: #171941;
+  font-size: 34px;
 `;
 export const Box4Container = styled.div`
   display: flex;
@@ -252,7 +270,7 @@ export const Box4Container = styled.div`
   align-items: center;
 `;
 export const Box4Description = styled.p`
-  color: #eee;
+  color: #171941;
   width: 200px;
   margin: 10px 0;
   text-align: center;
@@ -260,7 +278,7 @@ export const Box4Description = styled.p`
 export const MoreInfoBtn2 = styled.a`
   cursor: pointer;
   background: ${props => props.bgColor};
-  border-radius: 5px;
+  border-radius: 25px;
   width: 200px;
   height: 40px;
   display: flex;
@@ -275,4 +293,7 @@ export const MoreInfoBtn2 = styled.a`
     color: #eee;
     background: ${props => props.hoverColor};
   }
+`;
+export const Box5 = styled.div`
+  background: ${props => props.bgColor};
 `;

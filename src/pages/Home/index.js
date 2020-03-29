@@ -12,6 +12,15 @@ import {
   Box2Container,
   Box2Description,
   Box2Title,
+  Box3,
+  Box3Container,
+  Box3Description,
+  Box3Title,
+  Box4,
+  Box4Container,
+  Box4Description,
+  Box4Title,
+  Box5,
   Container,
   Header,
   IconLink,
@@ -23,64 +32,55 @@ import {
   MenuList,
   MenuText,
   MoreInfoBtn,
+  MoreInfoBtn2,
   Service,
-  ServiceDescription,
-  ServiceName,
-  Services,
-  Box3,
-  Box3Container,
-  Box3Title,
-  Box3Description,
-  Services2,
   Service2,
-  ServiceName2,
+  ServiceDescription,
   ServiceDescription2,
-  Box4,
-  Box4Title,
-  Box4Container,
-  Box4Description,
-  MoreInfoBtn2
+  ServiceName,
+  ServiceName2,
+  Services,
+  Services2
 } from "./styles";
 export default function Home() {
-
   const services = [
     {
       icon: "fas fa-globe-europe",
       name: "Dev. Web",
-      description: "Lorem ipsum dolor sit amet consectetur."
+      description:
+        "Desenvolvemos seu site, em uma das melhores Stacks do mercado!"
     },
     {
       icon: "fas fa-mobile-alt",
       name: "Dev. Mobile",
-      description: "Lorem ipsum dolor sit amet consectetur."
+      description:
+        "Desenvolvimento de app mobile profissionais em React Native!"
     },
     {
       icon: "fas fa-desktop",
       name: "Softwares",
-      description: "Lorem ipsum dolor sit amet consectetur."
+      description:
+        "Soluções próprias para ajudar no crescimento do seu negócio!"
     }
   ];
 
   const services2 = [
     {
-      icon:"fab fa-react",
-      name:"React",
-      description:"Lorem ipsum dolor sit amet consectetur."
+      icon: "fab fa-react",
+      name: "React",
+      description: "Lorem ipsum dolor sit amet consectetur."
     },
     {
-    
-      icon:"fas fa-mobile-alt",
-      name:"React Native",
-      description:"Lorem ipsum dolor sit amet consectetur."
+      icon: "fas fa-mobile-alt",
+      name: "React Native",
+      description: "Lorem ipsum dolor sit amet consectetur."
     },
     {
-    
-      icon:"fas fa-network-wired",
-      name:"React",
-      description:"Lorem ipsum dolor sit amet consectetur."
+      icon: "fas fa-network-wired",
+      name: "React",
+      description: "Lorem ipsum dolor sit amet consectetur."
     }
-
-  ]
+  ];
   const menuItens = [
     { id: 0, active: "active", name: "início" },
     { id: 1, active: "disable", name: "sobre" },
@@ -102,8 +102,15 @@ export default function Home() {
     "light-pink": "#ff79c6",
     "light-green": "#50fa7b",
     "dark-pink": "#e14eca",
-    "light-blue": "#525f7f"
+    "light-blue": "#407aff",
+    "other-white": "#f1efff",
+    "dark-green": "#87cb06",
+    white: "#fafafa",
+    "white-blue": "#7ba1f7",
+    "light-black": "#111116"
   };
+  const bgColor = colors["white"];
+  const menuColor = colors["light-blue"];
 
   function activeItem(id) {
     menuItens.map(item => {
@@ -123,8 +130,8 @@ export default function Home() {
 
   return (
     <Body>
-      <Header>
-        <Container color={colors["dark-pink"]}>
+      <Header bgColor={menuColor}>
+        <Container color={menuColor}>
           <MenuFather>
             <Menu>
               <MenuList>
@@ -161,23 +168,25 @@ export default function Home() {
         <Container>
           <Box1Container>
             <Box1Left>
-              <ApresentationTitle>as melhores soluções</ApresentationTitle>
-              <ApresentationDescription>
+              <ApresentationTitle color={colors["white"]}>
+                as melhores soluções <br /> para o seu negócio !
+              </ApresentationTitle>
+              <ApresentationDescription color={colors["other-white"]}>
                 No meio de tanta informação e da quantidade de ferramentas que
                 surgem todos os dias, você precisa de alguém que te leve na
                 direção certa.
               </ApresentationDescription>
               <MoreInfoBtn
                 href="#"
-                hoverColor={colors["light-pink"]}
-                bgColor={colors["dark-pink"]}
+                hoverColor={colors["white-blue"]}
+                bgColor={colors["light-blue"]}
               >
                 Saiba Mais
               </MoreInfoBtn>
             </Box1Left>
             <Box1Right>
               <lottie-player
-                src="https://assets3.lottiefiles.com/packages/lf20_xRmNN8.json"
+                src="https://assets7.lottiefiles.com/packages/lf20_QUXmIu.json"
                 background="#171941"
                 speed="1"
                 style={{ width: 350, height: 300 }}
@@ -188,89 +197,61 @@ export default function Home() {
           </Box1Container>
         </Container>
       </Box1>
-      <Box2 bgColor={colors["dark-pink"]}>
+      <Box2 bgColor={bgColor}>
         <Container>
           <Box2Container>
             <Box2Title>Nossos Serviços</Box2Title>
             <Box2Description>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Conheça um pouco dos serviços oferecidos pela Weise's Team!
             </Box2Description>
             <Services>
               {services.map(service => (
-                <Service>
+                <Service bgColor={colors["purple-dark"]}>
                   <i class={service.icon}></i>
                   <ServiceName>{service.name}</ServiceName>
-                  <ServiceDescription>
-                    Lorem ipsum dolor sit amet consectetur.
-                  </ServiceDescription>
+                  <ServiceDescription>{service.description}</ServiceDescription>
                 </Service>
               ))}
             </Services>
           </Box2Container>
         </Container>
       </Box2>
-      <Box3 bgColor={colors["purple-dark"]} >
+      <Box3 bgColor={colors["purple-dark"]}>
         <Container>
           <Box3Container>
-            <Box3Title> Software </Box3Title>
+            <Box3Title> Softwares </Box3Title>
             <Box3Description>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Box3Description>
-                <Services2>
-                  {services2.map(service2 =>(
-                    <Service2>
-                      <i class={service2.icon}></i>
-                      <ServiceName2>{service2.name}</ServiceName2>
-                      <ServiceDescription2>
-                      Lorem ipsum dolor sit amet consectetur.
-                      </ServiceDescription2>
-                    </Service2>
-                  ))}
-                </Services2>
+            <Services2>
+              {services2.map(service2 => (
+                <Service2>
+                  <i class={service2.icon}></i>
+                  <ServiceName2>{service2.name}</ServiceName2>
+                  <ServiceDescription2>
+                    Lorem ipsum dolor sit amet consectetur.
+                  </ServiceDescription2>
+                </Service2>
+              ))}
+            </Services2>
           </Box3Container>
         </Container>
       </Box3>
-      <Box4 bgColor={colors["dark-pink"]} >
+      <Box4 bgColor={colors["white"]}>
         <Box4Container>
           <Box4Title> Contato </Box4Title>
           <Box4Description>
             Lorem ipsum dolor sit amet consectetur.
           </Box4Description>
-          <MoreInfoBtn2 bgColor={colors["purple-dark"]}>
-            CONTATO
+          <MoreInfoBtn2
+            hoverColor={colors["light-blue"]}
+            bgColor={colors["purple-dark"]}
+          >
+            Contato
           </MoreInfoBtn2>
         </Box4Container>
       </Box4>
+      <Box5></Box5>
     </Body>
   );
 }
-
-const styles = {
-  body: {
-    display: "flex",
-    background: "#171941",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    zIndex: 11,
-    width: "100%",
-    height: "100%"
-  },
-  container: {
-    width: "100%",
-    maxWidth: 1000,
-    background: "green",
-    margin: "0 auto"
-  },
-  menu: {},
-  icons: {},
-  header: {
-    height: 80,
-    flex: 1,
-    background: "red"
-  },
-  mainBackground: {},
-  mainParagrafo: {},
-  menuList: { display: "flex", listStyle: "none" },
-  menuLink: { padding: 10, color: "blue" }
-};
