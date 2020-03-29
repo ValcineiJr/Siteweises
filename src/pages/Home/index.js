@@ -42,7 +42,8 @@ import {
   ServiceName,
   ServiceName2,
   Services,
-  Services2
+  Services2,
+  Box5Container
 } from "./styles";
 export default function Home() {
   const services = [
@@ -78,6 +79,11 @@ export default function Home() {
     { id: 1, active: "disable", name: "sobre" },
     { id: 2, active: "disable", name: "projetos" },
     { id: 3, active: "disable", name: "contato" }
+  ];
+  const Developers = [
+      { name:"Nikolas Santos", github:"alsdlkamdka", email:"Nikolassantoshttp@gmail.com"},
+      { name:"Nikolas Santos", github:"alsdlkamdka", email:"Nikolassantoshttp@gmail.com"},
+      { name:"Nikolas Santos", github:"alsdlkamdka", email:"Nikolassantoshttp@gmail.com"},
   ];
   const iconsList = [
     {
@@ -254,7 +260,13 @@ export default function Home() {
           </MoreInfoBtn2>
         </Box4Container>
       </Box4>
-      <Box5></Box5>
+      <Box5 bgColor={menuColor} >
+        <Container>
+          <Box5Container>
+                
+          </Box5Container>
+        </Container>
+      </Box5>
     </Body>
   );
 }

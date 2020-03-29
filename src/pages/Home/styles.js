@@ -156,12 +156,8 @@ export const Box1Image = styled.img`
 export const Box2 = styled.div`
   background: ${props => props.bgColor};
 `;
-export const Box2Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 60px 0;
-  align-items: center;
-`;
+
+
 export const Box2Title = styled.h2`
   color: #253138;
   font-size: 34px;
@@ -323,4 +319,17 @@ export const BtnMoreInfoService = styled.a`
 export const Logo = styled.img`
   width: 50px;
   height: 50px;
+`
+
+export const Box5Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  align-items: center;
+`;
+export const Box2Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  align-items: center;
 `;
