@@ -279,13 +279,14 @@ export const Box4Description = styled.p`
 export const MoreInfoBtn2 = styled.a`
   cursor: pointer;
   background: ${props => props.bgColor};
-  border-radius: 25px;
-  width: 200px;
-  height: 40px;
+  border-radius: 3px;
+  width: 170px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  padding: 10px;
   margin-top: 50px;
   transition: all 0.6s;
   text-decoration: none;
@@ -305,10 +306,11 @@ export const BtnMoreInfoService = styled.a`
   text-decoration: none;
   outline: none;
   font-size: 14px;
+  padding:10px;
   margin-top: 10px;
   font-weight: bold;
-  width: 100px;
-  border-radius: 15px;
+  width: 170px;
+  border-radius: 3px;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -326,10 +328,22 @@ export const Box5Container = styled.div`
   flex-direction: column;
   padding: 60px 0;
   align-items: center;
+  font-family: "Open Sans", sans-serif;
 `;
 export const Box2Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 60px 0;
   align-items: center;
+  font-family: "Open Sans", sans-serif;
 `;
+
+export const Box5Description = styled.p`
+  color: #FFFF;
+  width: 200px;
+  margin: 10px 0;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight:bold;
+`;
+

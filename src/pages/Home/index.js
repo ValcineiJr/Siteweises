@@ -43,7 +43,8 @@ import {
   ServiceName2,
   Services,
   Services2,
-  Box5Container
+  Box5Container,
+  Box5Description
 } from "./styles";
 export default function Home() {
   const services = [
@@ -80,11 +81,6 @@ export default function Home() {
     { id: 2, active: "disable", name: "projetos" },
     { id: 3, active: "disable", name: "contato" }
   ];
-  const Developers = [
-      { name:"Nikolas Santos", github:"alsdlkamdka", email:"Nikolassantoshttp@gmail.com"},
-      { name:"Nikolas Santos", github:"alsdlkamdka", email:"Nikolassantoshttp@gmail.com"},
-      { name:"Nikolas Santos", github:"alsdlkamdka", email:"Nikolassantoshttp@gmail.com"},
-  ];
   const iconsList = [
     {
       name: "fab fa-facebook-square",
@@ -95,6 +91,25 @@ export default function Home() {
       slug: "https://www.instagram.com/weises_of_technology/"
     }
   ];
+
+  const FotterItens = [
+    {
+      name: "Nikolas Santos",
+      Github: "https://github.com/Nikolassantos",
+      icon:"fab fa-github"
+    },
+    {
+      name: "Valcinei Junior",
+      slug: "https://github.com/ValcineiJr",
+      icon:"fab fa-github"
+    },
+    {
+      name: "Gabriel",
+      slug: "https://github.com/ValcineiJr",
+      icon:"fab fa-github"
+    }
+  ];
+
   const colors = {
     "purple-dark": "#171941",
     "light-pink": "#ff79c6",
@@ -234,9 +249,9 @@ export default function Home() {
               {services2.map(service2 => (
                 <Service2>
                   <i class={service2.icon}></i>
-                  <ServiceName2>{service2.name}</ServiceName2>
+                  <ServiceName2>HORIZON</ServiceName2>
                   <ServiceDescription2>
-                    Lorem ipsum dolor sit amet consectetur.
+                    Software para gestão de restaurantes.
                   </ServiceDescription2>
                   <BtnMoreInfoService>Login</BtnMoreInfoService>
                   <BtnMoreInfoService>Saiba Mais</BtnMoreInfoService>
@@ -261,11 +276,9 @@ export default function Home() {
         </Box4Container>
       </Box4>
       <Box5 bgColor={menuColor} >
-        <Container>
-          <Box5Container>
-                
-          </Box5Container>
-        </Container>
+        <Box5Container>
+          <Box5Description> Weise's Team © 2020 - Todos os direitos reservados </Box5Description>
+        </Box5Container>
       </Box5>
     </Body>
   );

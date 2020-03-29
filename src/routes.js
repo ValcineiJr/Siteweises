@@ -6,7 +6,7 @@ export default function Routes() {
     <Router>
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <Home/>
         </Route>
       </Switch>
     </Router>
