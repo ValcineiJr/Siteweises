@@ -21,11 +21,13 @@ import {
   Box4Description,
   Box4Title,
   Box5,
+  BtnMoreInfoService,
   Container,
   Header,
   IconLink,
   Icons,
   IconsList,
+  Logo,
   Menu,
   MenuFather,
   MenuLink,
@@ -121,6 +123,7 @@ export default function Home() {
   return (
     <Body>
       <Header bgColor={menuColor}>
+        <Logo src={require("../../Animation/logo.png")} />
         <Container color={menuColor}>
           <MenuFather>
             <Menu>
@@ -214,6 +217,14 @@ export default function Home() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Box3Description>
             <Services2>
+              <lottie-player
+                src="https://assets6.lottiefiles.com/packages/lf20_ETrXRU.json"
+                background="#171941"
+                speed="1"
+                style={{ width: 350, height: 300 }}
+                loop
+                autoplay
+              ></lottie-player>
               {services2.map(service2 => (
                 <Service2>
                   <i class={service2.icon}></i>
@@ -221,6 +232,8 @@ export default function Home() {
                   <ServiceDescription2>
                     Lorem ipsum dolor sit amet consectetur.
                   </ServiceDescription2>
+                  <BtnMoreInfoService>Login</BtnMoreInfoService>
+                  <BtnMoreInfoService>Saiba Mais</BtnMoreInfoService>
                 </Service2>
               ))}
             </Services2>

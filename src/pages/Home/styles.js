@@ -244,7 +244,7 @@ export const Service2 = styled.div`
 
   i {
     font-size: 30px;
-    color: #407aff;
+    color: #03cd76;
   }
 `;
 export const ServiceName2 = styled.span`
@@ -301,4 +301,26 @@ export const MoreInfoBtn2 = styled.a`
 `;
 export const Box5 = styled.div`
   background: ${props => props.bgColor};
+`;
+
+export const BtnMoreInfoService = styled.a`
+  background: #171941;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+  width: 100px;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+`;
+export const Logo = styled.img`
+  width: 50px;
+  height: 50px;
 `;
