@@ -26,6 +26,8 @@ export const Header = styled.div`
   background: ${props => props.bgColor};
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 1;
 `;
 export const MenuList = styled.ul`
   list-style: none;
@@ -79,6 +81,7 @@ export const MenuFather = styled.div`
   align-items: center;
 `;
 export const Box1 = styled.div`
+  margin-top: 80px;
   background: ${props => props.bgColor};
   padding: 70px 0;
 `;
@@ -101,6 +104,7 @@ export const Box1Right = styled.div`
   display: flex;
   justify-content: center;
   height: 300px;
+  z-index: 0;
 
   @media (max-width: 700px) {
     display: none;
@@ -128,13 +132,14 @@ export const ApresentationDescription = styled.p`
 export const MoreInfoBtn = styled.a`
   cursor: pointer;
   background: ${props => props.bgColor};
-  border-radius: 5px;
+  border-radius: 3px;
   width: 170px;
   min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  padding: 10px;
   margin-top: 50px;
   transition: all 0.6s;
   text-decoration: none;

@@ -66,18 +66,8 @@ export default function Home() {
 
   const services2 = [
     {
-      icon: "fab fa-react",
-      name: "React",
-      description: "Lorem ipsum dolor sit amet consectetur."
-    },
-    {
-      icon: "fas fa-mobile-alt",
-      name: "React Native",
-      description: "Lorem ipsum dolor sit amet consectetur."
-    },
-    {
       icon: "fas fa-network-wired",
-      name: "React",
+      name: "Node.js",
       description: "Lorem ipsum dolor sit amet consectetur."
     }
   ];
