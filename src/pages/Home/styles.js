@@ -319,7 +319,7 @@ export const BtnMoreInfoService = styled.a`
   height: 40px;
 `;
 export const Logo = styled.img`
-  width: 50px;
+  width: 100px;
   height: 50px;
 `
 

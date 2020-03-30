@@ -76,10 +76,10 @@ export default function Home() {
     }
   ];
   const menuItens = [
-    { id: 0, active: "active", name: "início" },
-    { id: 1, active: "disable", name: "sobre" },
-    { id: 2, active: "disable", name: "projetos" },
-    { id: 3, active: "disable", name: "contato" }
+    { id: 1, active: "active", name: "início" },
+    { id: 2, active: "disable", name: "sobre" },
+    { id: 3, active: "disable", name: "projetos" },
+    { id: 4, active: "disable", name: "contato" }
   ];
   const iconsList = [
     {
@@ -144,11 +144,11 @@ export default function Home() {
   return (
     <Body>
       <Header bgColor={menuColor}>
-        <Logo src={require("../../Animation/logo.png")} />
         <Container color={menuColor}>
           <MenuFather>
             <Menu>
               <MenuList>
+              <Logo src={require("../../Animation/logo.png")} />
                 {menuItens.map(item => (
                   <MenuLink key={item.id} href="#">
                     <li>
