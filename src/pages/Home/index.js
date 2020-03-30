@@ -44,7 +44,7 @@ import {
   Services,
   Services2,
   Box5Container,
-  Box5Description
+  Box5Description,
 } from "./styles";
 export default function Home() {
   const services = [
@@ -89,24 +89,6 @@ export default function Home() {
     {
       name: "fab fa-instagram",
       slug: "https://www.instagram.com/weises_of_technology/"
-    }
-  ];
-
-  const FotterItens = [
-    {
-      name: "Nikolas Santos",
-      Github: "https://github.com/Nikolassantos",
-      icon:"fab fa-github"
-    },
-    {
-      name: "Valcinei Junior",
-      slug: "https://github.com/ValcineiJr",
-      icon:"fab fa-github"
-    },
-    {
-      name: "Gabriel",
-      slug: "https://github.com/ValcineiJr",
-      icon:"fab fa-github"
     }
   ];
 

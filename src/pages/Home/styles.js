@@ -32,10 +32,7 @@ export const Header = styled.div`
 export const MenuList = styled.ul`
   list-style: none;
   display: flex;
-
-  @media (max-width: 500px) {
-    display: none;
-  }
+  max-width:980px;
 `;
 export const MenuLink = styled.a`
   padding: 10px;
@@ -95,7 +92,7 @@ export const Box1Left = styled.div`
   padding: 12px;
   height: 300px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
     align-items: center;
   }
 `;
@@ -346,4 +343,5 @@ export const Box5Description = styled.p`
   font-family: "Open Sans", sans-serif;
   font-weight:bold;
 `;
+
 
