@@ -62,6 +62,9 @@ export const Icons = styled.div``;
 export const IconsList = styled.ul`
   display: flex;
   list-style: none;
+  @media (max-width: 980px) {
+    padding:10px;
+  }
 `;
 export const IconLink = styled.a`
   margin: 8px;
@@ -112,7 +115,7 @@ export const ApresentationTitle = styled.h1`
   font-size: 30px;
   color: ${props => props.color};
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
     text-align: center;
   }
 `;
@@ -122,7 +125,7 @@ export const ApresentationDescription = styled.p`
   margin-top: 10px;
   font-size: 16px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
     text-align: center;
   }
 `;
@@ -218,6 +221,10 @@ export const Box3Description = styled.p`
   color: #eee;
   margin: 10px 0;
   text-align: center;
+
+  @media (max-width: 414px) {
+    font-size:14px;
+  }
 `;
 export const Services2 = styled.div`
   display: flex;
@@ -318,6 +325,9 @@ export const BtnMoreInfoService = styled.a`
 export const Logo = styled.img`
   width: 100px;
   height: 50px;
+  @media (max-width: 630px) {
+    display: none;
+  }
 `
 
 export const Box5Container = styled.div`
