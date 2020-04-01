@@ -17,7 +17,7 @@ export const Container = styled.div`
   background: ${props => props.color};
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
-  fo
+
 `;
 export const Menu = styled.div``;
 export const Header = styled.div`
@@ -33,6 +33,9 @@ export const MenuList = styled.ul`
   list-style: none;
   display: flex;
   max-width:980px;
+  @media (max-width: 695px) {
+    
+  }
 `;
 export const MenuLink = styled.a`
   padding: 10px;
@@ -47,6 +50,9 @@ export const MenuLink = styled.a`
   .active {
     color: #fff;
     border-bottom: 3px solid #fff;
+  }
+  @media (max-width: 695px) {
+    display:none;
   }
 `;
 export const MenuText = styled.span`
@@ -325,7 +331,7 @@ export const BtnMoreInfoService = styled.a`
 export const Logo = styled.img`
   width: 100px;
   height: 50px;
-  @media (max-width: 630px) {
+  @media (max-width: 695px) {
     display: none;
   }
 `
@@ -353,5 +359,21 @@ export const Box5Description = styled.p`
   font-family: "Open Sans", sans-serif;
   font-weight:bold;
 `;
+
+export const menuToggle = styled.div`
+  width:100px;
+  height:50px;
+  background-color: #FFF;
+  margin-left:50px;
+
+`;
+
+
+
+
+
+
+
+
 
 

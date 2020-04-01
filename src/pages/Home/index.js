@@ -1,7 +1,6 @@
 import React from "react";
 import * as animationData from "../../Animation/17899-hand-sanitizer.json";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+
 import {
   ApresentationDescription,
   ApresentationTitle,
@@ -47,6 +46,8 @@ import {
   Services2,
   Box5Container,
   Box5Description,
+  menuToggle,
+  iconMenu
 } from "./styles";
 export default function Home() {
   const services = [
@@ -132,7 +133,13 @@ export default function Home() {
           <MenuFather>
             <Menu>
               <MenuList>
+              
               <Logo src={require("../../Animation/logo.png")} />
+              <menuToggle>
+                <iconMenu>
+                  <i class="fas fa-bars"></i>
+                </iconMenu>
+                </menuToggle>
                 {menuItens.map(item => (
                   <MenuLink key={item.id} href="#">
                     <li>
@@ -265,7 +272,7 @@ export default function Home() {
         </Box5Container>
       </Box5>
 
-      
+
     </Body>
   );
 }
