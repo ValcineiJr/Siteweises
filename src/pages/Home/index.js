@@ -1,5 +1,7 @@
 import React from "react";
 import * as animationData from "../../Animation/17899-hand-sanitizer.json";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 import {
   ApresentationDescription,
   ApresentationTitle,
