@@ -17,6 +17,10 @@ export const Container = styled.div`
   background: ${props => props.color};
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e21e17ada3d16b36f81e886caa563a364e4a7f3f
 `;
 export const Menu = styled.div``;
 export const Header = styled.div`
@@ -31,9 +35,9 @@ export const Header = styled.div`
 export const MenuList = styled.ul`
   list-style: none;
   display: flex;
-
-  @media (max-width: 500px) {
-    display: none;
+  max-width:980px;
+  @media (max-width: 695px) {
+    
   }
 `;
 export const MenuLink = styled.a`
@@ -50,6 +54,9 @@ export const MenuLink = styled.a`
     color: #fff;
     border-bottom: 3px solid #fff;
   }
+  @media (max-width: 695px) {
+    display:none;
+  }
 `;
 export const MenuText = styled.span`
   font-weight: bold;
@@ -64,6 +71,9 @@ export const Icons = styled.div``;
 export const IconsList = styled.ul`
   display: flex;
   list-style: none;
+  @media (max-width: 980px) {
+    padding:10px;
+  }
 `;
 export const IconLink = styled.a`
   margin: 8px;
@@ -94,7 +104,7 @@ export const Box1Left = styled.div`
   padding: 12px;
   height: 300px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
     align-items: center;
   }
 `;
@@ -114,7 +124,7 @@ export const ApresentationTitle = styled.h1`
   font-size: 30px;
   color: ${props => props.color};
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
     text-align: center;
   }
 `;
@@ -124,7 +134,7 @@ export const ApresentationDescription = styled.p`
   margin-top: 10px;
   font-size: 16px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 980px) {
     text-align: center;
   }
 `;
@@ -155,12 +165,8 @@ export const Box1Image = styled.img`
 export const Box2 = styled.div`
   background: ${props => props.bgColor};
 `;
-export const Box2Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 60px 0;
-  align-items: center;
-`;
+
+
 export const Box2Title = styled.h2`
   color: #253138;
   font-size: 34px;
@@ -224,6 +230,10 @@ export const Box3Description = styled.p`
   color: #eee;
   margin: 10px 0;
   text-align: center;
+
+  @media (max-width: 414px) {
+    font-size:14px;
+  }
 `;
 export const Services2 = styled.div`
   display: flex;
@@ -282,13 +292,14 @@ export const Box4Description = styled.p`
 export const MoreInfoBtn2 = styled.a`
   cursor: pointer;
   background: ${props => props.bgColor};
-  border-radius: 25px;
-  width: 200px;
-  height: 40px;
+  border-radius: 3px;
+  width: 170px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  padding: 10px;
   margin-top: 50px;
   transition: all 0.6s;
   text-decoration: none;
@@ -308,10 +319,11 @@ export const BtnMoreInfoService = styled.a`
   text-decoration: none;
   outline: none;
   font-size: 14px;
+  padding:10px;
   margin-top: 10px;
   font-weight: bold;
-  width: 100px;
-  border-radius: 15px;
+  width: 170px;
+  border-radius: 3px;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -320,6 +332,51 @@ export const BtnMoreInfoService = styled.a`
   height: 40px;
 `;
 export const Logo = styled.img`
-  width: 50px;
+  width: 100px;
   height: 50px;
+  @media (max-width: 695px) {
+    display: none;
+  }
+`
+
+export const Box5Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
 `;
+export const Box2Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+`;
+
+export const Box5Description = styled.p`
+  color: #FFFF;
+  width: 200px;
+  margin: 10px 0;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight:bold;
+`;
+
+export const menuToggle = styled.div`
+  width:100px;
+  height:50px;
+  background-color: #FFF;
+  margin-left:50px;
+
+`;
+
+
+
+
+
+
+
+
+
+
