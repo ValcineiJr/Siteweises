@@ -17,7 +17,6 @@ export const Container = styled.div`
   background: ${props => props.color};
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
-  fo
 `;
 export const Menu = styled.div``;
 export const Header = styled.div`
