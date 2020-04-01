@@ -1,5 +1,6 @@
 import React from "react";
 import * as animationData from "../../Animation/17899-hand-sanitizer.json";
+
 import {
   ApresentationDescription,
   ApresentationTitle,
@@ -42,7 +43,11 @@ import {
   ServiceName,
   ServiceName2,
   Services,
-  Services2
+  Services2,
+  Box5Container,
+  Box5Description,
+  menuToggle,
+  iconMenu
 } from "./styles";
 export default function Home() {
   const services = [
@@ -74,10 +79,10 @@ export default function Home() {
     }
   ];
   const menuItens = [
-    { id: 0, active: "active", name: "início" },
-    { id: 1, active: "disable", name: "sobre" },
-    { id: 2, active: "disable", name: "projetos" },
-    { id: 3, active: "disable", name: "contato" }
+    { id: 1, active: "active", name: "início" },
+    { id: 2, active: "disable", name: "sobre" },
+    { id: 3, active: "disable", name: "projetos" },
+    { id: 4, active: "disable", name: "contato" }
   ];
   const iconsList = [
     {
@@ -89,6 +94,7 @@ export default function Home() {
       slug: "https://www.instagram.com/weises_of_technology/"
     }
   ];
+
   const colors = {
     "purple-dark": "#171941",
     "light-pink": "#ff79c6",
@@ -123,11 +129,17 @@ export default function Home() {
   return (
     <Body>
       <Header bgColor={menuColor}>
-        <Logo src={require("../../Animation/logo.png")} />
         <Container color={menuColor}>
           <MenuFather>
             <Menu>
               <MenuList>
+              
+              <Logo src={require("../../Animation/logo.png")} />
+              <menuToggle>
+                <iconMenu>
+                  <i class="fas fa-bars"></i>
+                </iconMenu>
+                </menuToggle>
                 {menuItens.map(item => (
                   <MenuLink key={item.id} href="#">
                     <li>
@@ -228,9 +240,9 @@ export default function Home() {
               {services2.map(service2 => (
                 <Service2>
                   <i class={service2.icon}></i>
-                  <ServiceName2>{service2.name}</ServiceName2>
+                  <ServiceName2>HORIZON</ServiceName2>
                   <ServiceDescription2>
-                    Lorem ipsum dolor sit amet consectetur.
+                    Software para gestão de restaurantes.
                   </ServiceDescription2>
                   <BtnMoreInfoService>Login</BtnMoreInfoService>
                   <BtnMoreInfoService>Saiba Mais</BtnMoreInfoService>
@@ -254,7 +266,13 @@ export default function Home() {
           </MoreInfoBtn2>
         </Box4Container>
       </Box4>
-      <Box5></Box5>
+      <Box5 bgColor={menuColor} >
+        <Box5Container>
+          <Box5Description> Weise's Team © 2020 - Todos os direitos reservados </Box5Description>
+        </Box5Container>
+      </Box5>
+
+
     </Body>
   );
 }
