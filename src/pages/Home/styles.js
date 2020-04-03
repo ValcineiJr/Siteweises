@@ -17,9 +17,12 @@ export const Container = styled.div`
   background: ${props => props.color};
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
-
 `;
-export const Menu = styled.div``;
+export const Menu = styled.div`
+  display: flex;
+  flex: 1;
+  text-align: center;
+`;
 export const Header = styled.div`
   width: 100%;
   min-height: 80px;
@@ -32,10 +35,7 @@ export const Header = styled.div`
 export const MenuList = styled.ul`
   list-style: none;
   display: flex;
-  max-width:980px;
-  @media (max-width: 695px) {
-    
-  }
+  max-width: 980px;
 `;
 export const MenuLink = styled.a`
   padding: 10px;
@@ -52,7 +52,7 @@ export const MenuLink = styled.a`
     border-bottom: 3px solid #fff;
   }
   @media (max-width: 695px) {
-    display:none;
+    display: none;
   }
 `;
 export const MenuText = styled.span`
@@ -69,7 +69,7 @@ export const IconsList = styled.ul`
   display: flex;
   list-style: none;
   @media (max-width: 980px) {
-    padding:10px;
+    padding: 10px;
   }
 `;
 export const IconLink = styled.a`
@@ -148,7 +148,7 @@ export const MoreInfoBtn = styled.a`
   padding: 10px;
   margin-top: 50px;
   transition: all 0.6s;
-  text-decoration: none;
+  text-decoration: none !important;
 
   &:hover {
     color: #eee;
@@ -162,7 +162,6 @@ export const Box1Image = styled.img`
 export const Box2 = styled.div`
   background: ${props => props.bgColor};
 `;
-
 
 export const Box2Title = styled.h2`
   color: #253138;
@@ -229,7 +228,7 @@ export const Box3Description = styled.p`
   text-align: center;
 
   @media (max-width: 414px) {
-    font-size:14px;
+    font-size: 14px;
   }
 `;
 export const Services2 = styled.div`
@@ -295,7 +294,7 @@ export const MoreInfoBtn2 = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #fff !important;
   padding: 10px;
   margin-top: 50px;
   transition: all 0.6s;
@@ -313,15 +312,15 @@ export const Box5 = styled.div`
 export const BtnMoreInfoService = styled.a`
   background: #171941;
   border: 0;
-  text-decoration: none;
+  text-decoration: none !important;
   outline: none;
   font-size: 14px;
-  padding:10px;
+  padding: 10px;
   margin-top: 10px;
   font-weight: bold;
   width: 170px;
   border-radius: 3px;
-  color: #fff;
+  color: #fff !important;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -334,7 +333,7 @@ export const Logo = styled.img`
   @media (max-width: 695px) {
     display: none;
   }
-`
+`;
 
 export const Box5Container = styled.div`
   display: flex;
@@ -352,28 +351,49 @@ export const Box2Container = styled.div`
 `;
 
 export const Box5Description = styled.p`
-  color: #FFFF;
+  color: #ffff;
   width: 200px;
   margin: 10px 0;
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  font-weight:bold;
+  font-weight: bold;
 `;
 
 export const menuToggle = styled.div`
-  width:100px;
-  height:50px;
-  background-color: #FFF;
-  margin-left:50px;
-
+  width: 100px;
+  height: 50px;
+  background-color: #fff;
+  margin-left: 50px;
 `;
+export const FottericonFacebook = styled.div`
+  width: 100px;
+  height: 100px;
+  i{
+    font-size:45px;
 
+  }
+  a { color: inherit; }
+`;
+export const FottericonWhasapp = styled.div`
+  width: 100px;
+  height: 100px;
+  i{
+    font-size:45px;
 
+  }
+  a { color: inherit; }
+`;
+export const FottericonInstagram= styled.div`
+  width: 100px;
+  height: 100px;
+  i{
+    font-size:45px;
 
-
-
-
-
-
-
+  }
+  a { color: inherit; } 
+`;
+export const BoxIcons = styled.div`
+  display:flex;
+  align-items: center;
+`;
 
