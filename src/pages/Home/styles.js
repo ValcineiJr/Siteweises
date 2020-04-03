@@ -365,3 +365,35 @@ export const menuToggle = styled.div`
   background-color: #fff;
   margin-left: 50px;
 `;
+export const FottericonFacebook = styled.div`
+  width: 100px;
+  height: 100px;
+  i{
+    font-size:45px;
+
+  }
+  a { color: inherit; }
+`;
+export const FottericonWhasapp = styled.div`
+  width: 100px;
+  height: 100px;
+  i{
+    font-size:45px;
+
+  }
+  a { color: inherit; }
+`;
+export const FottericonInstagram= styled.div`
+  width: 100px;
+  height: 100px;
+  i{
+    font-size:45px;
+
+  }
+  a { color: inherit; } 
+`;
+export const BoxIcons = styled.div`
+  display:flex;
+  align-items: center;
+`;
+

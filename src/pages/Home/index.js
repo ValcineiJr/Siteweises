@@ -42,7 +42,11 @@ import {
   ServiceName,
   ServiceName2,
   Services,
-  Services2
+  Services2,
+  FottericonFacebook,
+  FottericonWhasapp,
+  FottericonInstagram,
+  BoxIcons
 } from "./styles";
 
 export default function Home() {
@@ -296,6 +300,19 @@ export default function Home() {
           <Box5Description>
             {" "}
             Weise's Team © 2020 - Todos os direitos reservados{" "}
+            <BoxIcons>
+              <FottericonFacebook>
+                <a href="https://www.facebook.com/WeisesTech">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </FottericonFacebook>
+              <FottericonWhasapp>
+                <a href=""><i class="fab fa-whatsapp"></i></a>
+              </FottericonWhasapp>
+              <FottericonInstagram>
+                  <a href="https://www.instagram.com/weisestech/?hl=pt-br"><i class="fab fa-instagram"> </i></a>
+              </FottericonInstagram>
+            </BoxIcons>
           </Box5Description>
         </Box5Container>
       </Box5>
